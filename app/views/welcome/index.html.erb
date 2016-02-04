@@ -1,9 +1,11 @@
 <div style="text-align: center;">
-<h1>Welcome to Bloccitoff</h1>
-<p>A simple tasklist</p>
+	<h1>Welcome to Bloccitoff</h1>
+	<p>A simple tasklist</p>
 </div>
 
-
-
-<%= link_to "Sign Up", new_user_registration_path, :class => 'navbar-link'  %> -
-	<%= link_to "Sign In", new_user_session_path, :class => 'navbar-link'  %>
+<div class="row">
+	<div class="six columns offset-by-three">
+		<%= link_to "Sign Up", new_user_registration_path, :class => 'button button-primary six columns'  %>
+		<%= link_to "Sign In", new_user_session_path, :class => 'button button-primary six columns'  %>
+	</div>
+</div>
