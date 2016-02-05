@@ -1,7 +1,12 @@
 source 'https://rubygems.org'
 
+#testing
+group :development, :test do
+	gem 'rspec-rails', '~> 3.0'
+end
+
 gem 'shoulda'
-gem 'rspec'
+
 gem 'factory_girl_rails', '~> 4.0'
 # Include FactoryGirl
 gem 'google-webfonts-rails'
