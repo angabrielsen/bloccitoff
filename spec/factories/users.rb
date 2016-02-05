@@ -1,4 +1,4 @@
-include RandomData
+require "random_data"
 
 FactoryGirl.define do
 	pw = RandomData.random_sentence
