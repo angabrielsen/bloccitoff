@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'factory_girl_rails', '~> 4.0'
+# Include FactoryGirl
 gem 'google-webfonts-rails'
 # Include Google webfonts
 gem 'devise'
