@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'items/create'
+
   get 'users/show'
 
   root to: 'users#show'
