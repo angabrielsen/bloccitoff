@@ -11,17 +11,16 @@ class ItemsController < ApplicationController
 	# post '/items', to 'items#create'
   def create
 		@user = current_user
-		@item = Item.build(item_params)
+		@item = current_user.items.build(params.require(:item).permit(:name))
 
 		@new_item = Item.new
 
     if @item.save
 			flash[:notice] = "Item was saved."
-			# redirect_to @user
-			# redirect_to user_path(@user.id)
+			redirect_to root_path
 		else
 			flash[:error] = "There was an error saving the item. Please try again."
-			# render 'users/show'
+			render :new
 		end
   end
 end

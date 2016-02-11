@@ -5,8 +5,6 @@
 	<%= render partial: "items/form" %>
 
 	<% if current_user %>
-		<% @user_items.each do |item| %>
-			<%= render partial: 'items/item', locals: { item: item } %>
-		<% end %>
+			<%= render partial: 'items/item'  %>
 	<% end %>
 </div>
