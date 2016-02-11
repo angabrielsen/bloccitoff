@@ -1,12 +1,15 @@
 require 'rails_helper'
 
 RSpec.describe ItemsController, type: :controller do
+  describe "POST #create" do
+  	context "when logged in as a user" do
+  		let(:user) { create(:user) }
+  		before { sign_in(user) }
 
-  describe "GET #create" do
-    it "returns http success" do
-      get :create
-      expect(response).to have_http_status(:success)
-    end
+  		it "returns http success" do
+  			expect(response).to be_success
+  		end
+  	end
   end
 
 end
