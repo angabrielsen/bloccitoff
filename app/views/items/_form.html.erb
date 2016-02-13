@@ -1,5 +1,5 @@
 <div class="eight columns offset-by-two">
- <%= form_for Item.new, remote: true do |f| %>
+ <%= form_for Item.new do |f| %>
 		<div class="field">
 			<%= f.label :name %><br />
 			<%= f.text_field :name, autofocus: true %>

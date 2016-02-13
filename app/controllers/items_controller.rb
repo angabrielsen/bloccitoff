@@ -20,7 +20,7 @@ class ItemsController < ApplicationController
 			redirect_to root_path
 		else
 			flash[:error] = "There was an error saving the item. Please try again."
-			render :new
+			redirect_to root_path
 		end
   end
 end
