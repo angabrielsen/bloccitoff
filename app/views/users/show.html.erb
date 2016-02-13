@@ -1,4 +1,10 @@
 <div class="row">
 	<h1 style="text-align: center;">Hi, <%= current_user.name %></h1>
 	<p style="text-align: center;">Check out your tasks for the week</p>
+
+	<%= render partial: "items/form" %>
+
+	<% if current_user %>
+			<%= render partial: 'items/item'  %>
+	<% end %>
 </div>

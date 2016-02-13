@@ -1,0 +1,9 @@
+<div class="eight columns offset-by-two">
+ 	<% if @user_items.count < 1 %>
+ 		<p>Make a to-do!</p>
+ 	<% else %>
+ 		<% @user_items.each do |item| %>
+ 			<%= item.name %><br />
+ 		<% end %>
+ 	<% end %>
+</div>
