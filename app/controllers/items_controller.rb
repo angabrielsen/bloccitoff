@@ -16,11 +16,27 @@ class ItemsController < ApplicationController
 		@new_item = Item.new
 
     if @item.save
-			flash[:notice] = "Item was saved."
+			flash[:notice] = "To-do saved."
 			redirect_to root_path
 		else
-			flash[:error] = "There was an error saving the item. Please try again."
+			flash[:error] = "There was an error saving this to-do. Please try again."
 			redirect_to root_path
 		end
   end
+
+  def destroy
+  	@user = User.find(params[:id])
+  	@item = @user.item.find(params[:id])
+
+  	if @item.destroy
+			flash[:notice] = "To-do completed!"
+		else
+			flash[:error] = "There was an error deleting this to do. Please try again."
+		end
+  end
+
+	respond_to do |format|
+		format.html
+		format.js
+	end
 end
