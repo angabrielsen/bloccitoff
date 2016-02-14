@@ -6,7 +6,9 @@
 	<%= form_for Item.new do |f| %>
 		<div class="field">
 			<%= f.text_field :name, autofocus: true, class: 'ten columns' %>
-			<%= f.submit "&#10003;", class: 'two columns', style: 'background-color: #009933;' %>
+			<%= button_tag(type: 'submit', style: 'background-color: #009933;') do %>
+				<%= fa_icon "plus", style: 'color: #FFF;' %>
+			<% end %>
 		</div>
 	<% end %>
 </div>

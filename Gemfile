@@ -7,7 +7,7 @@ group :development, :test do
 	gem 'faker'
 end
 
-gem 'shoulda'
+gem 'font-awesome-rails'
 
 gem 'factory_girl_rails', '~> 4.0'
 # Include FactoryGirl
