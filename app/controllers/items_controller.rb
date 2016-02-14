@@ -25,8 +25,8 @@ class ItemsController < ApplicationController
   end
 
   def destroy
-  	@user = User.find(params[:id])
-  	@item = @user.item.find(params[:id])
+  	@user = current_user
+  	@item = @user.items.find(params[:id])
 
   	if @item.destroy
 			flash[:notice] = "To-do completed!"
