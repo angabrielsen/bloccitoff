@@ -3,6 +3,9 @@
  		<p>Make a to-do!</p>
  	<% else %>
  		<% @user_items.each do |item| %>
+ 			<%= button_tag(type: 'submit', style: 'background-color: #ff0000;') do %>
+ 				<%= fa_icon "minus", style: 'color: #FFF;' %>
+ 			<% end %>
  			<%= item.name %><br />
  		<% end %>
  	<% end %>
