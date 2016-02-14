@@ -1,10 +1,12 @@
-<div class="eight columns offset-by-two">
- <%= form_for Item.new do |f| %>
-		<div class="field">
-			<%= f.label :name %><br />
-			<%= f.text_field :name, autofocus: true %>
-		</div>
+<div class="twelve columns">
+	<div class="row">
+			<p style="margin: 0px;">New to-do:</p>
+	</div>
 
-			<%= f.submit "Submit" %>
+	<%= form_for Item.new do |f| %>
+		<div class="field">
+			<%= f.text_field :name, autofocus: true, class: 'ten columns' %>
+			<%= f.submit "&#10003;", class: 'two columns', style: 'background-color: #009933;' %>
+		</div>
 	<% end %>
 </div>
