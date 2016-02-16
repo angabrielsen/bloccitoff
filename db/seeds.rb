@@ -7,10 +7,12 @@ ashton = User.create!(
 )
 
 10.times do
-	Item.create!(
+	item = Item.create!(
 		user: User.first,
 		name: Faker::Lorem.sentence
 	)
+
+	item.update_attribute(:created_at, "2016-02-08 12:00:00")
 end
 
 
