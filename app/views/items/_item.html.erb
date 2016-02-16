@@ -1,8 +1,8 @@
 <div class="twelve columns">
-	<% if @user_items.count < 1 %>
+	<% if current_user.items.count < 1 %>
 		<p>Make a to-do!</p>
 	<% else %>
-		<% @user_items.each do |item| %>
+		<% current_user.items.each do |item| %>
 			<%= content_tag :div, id: "item-#{item.id}" do %>
 				<div class="row">
 					<%= link_to [current_user, item], method: :delete, remote: :true, style: "text-decoration: none;", class: "two columns"  do%>

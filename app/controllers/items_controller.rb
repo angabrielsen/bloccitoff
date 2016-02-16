@@ -14,7 +14,7 @@ class ItemsController < ApplicationController
 		end
 
 		respond_to do |format|
-			format.html 
+			format.html { redirect_to root_path }
 			format.js
 		end
   end
@@ -30,7 +30,7 @@ class ItemsController < ApplicationController
 		end
 
 		respond_to do |format|
-			format.html { redirect_to root_path}
+			format.html { redirect_to root_path }
 			format.js
 		end
   end
