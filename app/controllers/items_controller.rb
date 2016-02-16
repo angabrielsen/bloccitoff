@@ -26,17 +26,17 @@ class ItemsController < ApplicationController
 
   def destroy
   	@user = current_user
-  	@item = @user.items.find(params[:id])
+  	@item = current_user.items.find(params[:id])
 
   	if @item.destroy
 			flash[:notice] = "To-do completed!"
 		else
 			flash[:error] = "There was an error deleting this to do. Please try again."
 		end
-  end
 
-	respond_to do |format|
-		format.html
-		format.js
-	end
+		respond_to do |format|
+			format.html
+			format.js
+		end
+  end
 end
