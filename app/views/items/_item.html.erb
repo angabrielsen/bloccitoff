@@ -5,7 +5,7 @@
 		<% @user_items.each do |item| %>
 			<%= content_tag :div, id: "item-#{item.id}" do %>
 				<%= link_to [current_user, item], method: :delete, remote: :true  do%>
-					<%= fa_icon "minus-square", style: "color: #f00;" %>
+					<%= fa_icon "minus-square" %>
 				<% end %>
 				<%= item.name %><br />
 				<%= time_left(item) %>
