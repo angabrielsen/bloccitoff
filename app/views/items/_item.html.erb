@@ -1,25 +1,17 @@
-<div class="twelve columns">
-	<% if current_user.items.count < 1 %>
-		<p>Make a to-do!</p>
-	<% else %>
-		<% current_user.items.each do |item| %>
-			<%= content_tag :div, id: "item-#{item.id}" do %>
-				<div class="row">
-					<%= link_to [current_user, item], method: :delete, remote: :true, style: "text-decoration: none;", class: "two columns"  do%>
-						<%= fa_icon "minus-square", style: "color: #f00;" %>
-					<% end %>
-
-					<div class="ten columns">
-						<%= item.name %>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="ten columns offset-by-two" style="font-size: 10px;">
-						<%= time_left(item) %>
-					</div>
-				</div>
-			<% end %>
+<%= content_tag :div, id: "item-#{item.id}" do %>
+	<div class="row">
+		<%= link_to [current_user, item], method: :delete, remote: :true, style: "text-decoration: none;", class: "two columns"  do%>
+			<%= fa_icon "minus-square", style: "color: #f00;" %>
 		<% end %>
-	<% end %>
-</div>
+
+		<div class="ten columns">
+			<%= item.name %>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="ten columns offset-by-two" style="font-size: 10px;">
+			<%= time_left(item) %>
+		</div>
+	</div>
+<% end %>

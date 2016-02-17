@@ -8,9 +8,9 @@ class ItemsController < ApplicationController
 		@new_item = Item.new
 
     if @item.save
-			flash[:notice] = "To-do saved."
+			flash.now[:notice] = "To-do saved."
 		else
-			flash[:error] = "There was an error saving this to-do. Please try again."
+			flash.now[:error] = "There was an error saving this to-do. Please try again."
 		end
 
 		respond_to do |format|

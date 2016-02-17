@@ -5,6 +5,16 @@
 	<%= render partial: "items/form" %>
 
 	<% if current_user %>
-			<%= render partial: 'items/item'  %>
+			<div id="all_items">	
+				<div class="twelve columns">
+					<% if current_user.items.count < 1 %>
+						<p>Make a to-do!</p>
+					<% else %>
+						<% current_user.items.each do |item| %>
+							<%= render partial: 'items/item', locals: {item: item} %>
+						<% end %>
+					<% end %>
+				</div>
+			</div>
 	<% end %>
 </div>

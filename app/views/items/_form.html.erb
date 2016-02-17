@@ -3,7 +3,7 @@
 			<p style="margin: 0px;">New to-do:</p>
 	</div>
 
-	<%= form_for [current_user, Item.new] do |f| %>
+	<%= form_for [current_user, Item.new], remote: :true do |f| %>
 		<div class="field">
 			<%= f.text_field :name, autofocus: true, class: 'ten columns' %>
 			<%= button_tag(type: 'submit', style: 'background-color: #009933;') do %>
