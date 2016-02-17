@@ -14,3 +14,15 @@
  *= require_self
  *= require font-awesome
  */
+.alert {
+	color: #FFF;
+	padding-left: 15px;
+}
+
+ .alert-success {
+ 	background-color: #009933;
+ }
+
+ .alert-warning, .alert-danger {
+ 	background-color: #ff0000;
+ }
