@@ -1,1 +1,4 @@
-$('#item-' + <%= @item.id %>).fadeOut();
+<% if @item.destroyed? %>
+	$('#item-' + <%= @item.id %>).fadeOut();
+<% end %>
+$('.flash').html("<%= escape_javascript(render partial: 'shared/flash')%>")

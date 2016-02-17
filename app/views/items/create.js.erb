@@ -1,7 +1,5 @@
 <% if @item.valid? %>
 	$('#all_items').prepend("<%= escape_javascript(render partial: 'items/item', locals: {item: @item}) %>")
 	$('#new_item').trigger('reset')
-	$('.flash').html("<%= escape_javascript(render partial: 'shared/flash')%>")
-<% else %>
-	$('.flash').html("<%= escape_javascript(render partial: 'shared/flash')%>")
 <% end %>
+$('.flash').html("<%= escape_javascript(render partial: 'shared/flash')%>")

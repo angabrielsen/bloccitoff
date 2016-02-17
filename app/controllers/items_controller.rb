@@ -24,9 +24,9 @@ class ItemsController < ApplicationController
   	@item = current_user.items.find(params[:id])
 
   	if @item.destroy
-			flash[:notice] = "To-do completed!"
+			flash.now[:notice] = "To-do completed!"
 		else
-			flash[:error] = "There was an error deleting this to do. Please try again."
+			flash.now[:error] = "There was an error deleting this to do. Please try again."
 		end
 
 		respond_to do |format|
