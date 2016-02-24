@@ -13,8 +13,9 @@ group :production do
 group :development, :test do
 	gem 'rspec-rails', '~> 3.0'
 	gem 'shoulda'
-	gem 'faker'
 end
+
+gem 'faker'
 
 gem 'font-awesome-rails'
 
