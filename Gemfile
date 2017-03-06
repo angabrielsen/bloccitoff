@@ -15,6 +15,8 @@ group :development, :test do
 	gem 'shoulda'
 end
 
+gem 'json'
+
 gem 'faker'
 
 gem 'font-awesome-rails'
